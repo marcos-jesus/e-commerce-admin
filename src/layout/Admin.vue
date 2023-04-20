@@ -1,8 +1,9 @@
 <template>
   <h1>Admin Layout</h1>
-  <Input :input="dataName" />
-  <Input :input="dataProduto" />
+  <Input :input="dataName"/>
+  <Input :input="dataProduto"/>
   <Input :input="dataQuantidade"/>
+  <Input :input="dataEmail"/>
 </template>
 
 <script setup>
@@ -12,19 +13,29 @@
   const dataName = reactive({
     id: 'name',
     type: 'text',
-    label_name: 'Nome'
+    label_name: 'Nome',
+    label_text: ''
   })
   
   const dataProduto = reactive({
     id: 'produto',
     type: 'text',
-    label_name: 'Produto'
+    label_name: 'Produto',
+    label_text: ''
+  })
+
+  const dataEmail = reactive({
+    id: 'email',
+    type: 'email',
+    label_name: 'Email',
+    label_text: ''
   })
 
   const dataQuantidade = reactive({
     id: 'quantidade',
-    type: 'text',
-    label_name: 'Quantidade'
+    type: 'number',
+    label_name: 'Quantidade',
+    label_text: ''
   })
 
 </script>

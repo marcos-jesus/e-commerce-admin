@@ -8,11 +8,14 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "vue": "^3.2.47"
-  },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
-    "vite": "^4.2.0"
+    "vite": "^4.2.0",
+    "vue": "^3.2.47"
+  },
+  "dependencies": {
+    "element-plus": "^2.3.3",
+    "primeicons": "^6.0.1",
+    "primevue": "^3.27.0"
   }
 }
