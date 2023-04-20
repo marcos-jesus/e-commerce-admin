@@ -1,0 +1,25 @@
+.ElButton {
+  background-color: #8004f3;
+  color: white;
+  font-weight: bold;
+  margin-top: 2.5rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.el-button > span {
+  background: none;
+}
+
+.ElButton:hover {
+  background-color: black;
+  font-weight: bold;
+  color: white;
+}
+
+.ElButton:focus {
+  background-color: #fdd300;;
+  font-weight: bold;
+  color:black;
+}

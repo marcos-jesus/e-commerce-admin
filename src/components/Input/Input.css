@@ -1,4 +1,15 @@
 .ElInput {
   width: 20rem;
-  padding: 0.582rem;
+  margin-bottom: 10px;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid #8004f3;
+  color:white;
+  font-weight: 500;
+  font-size: 16px;
+  background-color:#29292e ;
+}
+
+.ElInput:hover {
+  border: 1px solid #fdd300;
 }

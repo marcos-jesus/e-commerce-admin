@@ -4,5 +4,5 @@
 <script setup>
   import Admin from '@/layout/Admin.vue'
 </script>
-<style scoped>
+<style src="@/styles/globalStyles.css">
 </style>

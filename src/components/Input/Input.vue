@@ -1,18 +1,22 @@
 <template>
-  <div class="ElInput">
-    <ElInput :type="props.input?.type" :id="props.input?.id" :placeholder="input?.label_name" v-model="text"></ElInput>
-    <ElButton> Confirmar</ElButton>
-  </div>
+
+    <ElInput
+      class="ElInput"
+      :type="props.input?.type" 
+      :id="props.input?.id" 
+      :placeholder="input?.label_name" 
+      v-model="text"
+    />
+    
 </template>
 
 <script setup lang="ts">
-  import { defineProps } from 'vue'
   import { ref } from 'vue';
+  import { defineProps } from 'vue'
 
-  import { ElButton } from 'element-plus';
   import { ElInput } from 'element-plus';
 
-  interface Input {
+  interface InputProps {
     id: string,
     type: string,
     label_name: string,
@@ -21,13 +25,12 @@
 
   const props = defineProps({
     input: {
-      type: Object as () => Input,
+      type: Object as () => InputProps,
       require: true,
     }
   })
 
   const text = ref('')
-
 </script>
 
 <style scoped src="./Input.css"></style>
