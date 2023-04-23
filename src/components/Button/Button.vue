@@ -1,33 +1,25 @@
 <template>
-
-  <ElButton 
-    :size="button?.size" 
-    class="ElButton"
-  > 
-  {{ props.button?.name }}
-  </ElButton>
-
+  <button type="button" class="btn"
+    :style="{ 'background-color': props.property?.color, 'width': props.property?.width, 'height': props.property?.heigth }">
+    {{ props.property?.text }}
+  </button>
 </template>
+
+<style src="./Button.css"></style>
+
 <script setup lang="ts">
-  import { defineProps, reactive } from 'vue'
-  import { ElButton } from 'element-plus';
+import { defineProps as definePropsVue, PropType } from 'vue';
 
-  interface ButtonProps {
-    name: String,
-    size: String,
-    backgroundColor: String,
-  }
+interface propsBtn {
+  text: string | null,
+  color: string | null
+  width: string | null
+  heigth: string | null
+}
 
-  const props = defineProps({
-    button: {
-      type: Object as () => ButtonProps,
-    }
-  })
 
-  const styles = reactive({
-    backgroundColor: '',
-  })
-
+const props = defineProps({
+  property: Object as PropType<propsBtn>
+})
 
 </script>
-<style scoped src="./Button.css"></style>

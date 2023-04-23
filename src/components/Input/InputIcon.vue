@@ -1,8 +1,7 @@
 <template>
   <div class="inputContainer">
-    <fa :icon="props.property?.iconFont" class="iconeEmail" size="2x" :color="props.property?.iconColor" />
-    <label class="placeholder"> {{ props.property?.labelText }}</label>
-    <input type="text" id="txtEmail" />
+    <fa :icon="props.property?.iconFont" class="iconeEmail" size="2x" :padding="props.property?.iconColor" />
+    <input type="text" id="txtEmail" :placeholder="props.property?.labelText" />
   </div>
 </template>
 <style src="./InputIcon.css"></style>
