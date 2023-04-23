@@ -15,7 +15,7 @@
     iconFont: Array<string | null>
   }
     
-  const props = definePropsVue({
+  const props = defineProps({
     icon: Object as PropType<iconProps>
   })
 
