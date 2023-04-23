@@ -8,15 +8,14 @@
 <style src="./InputIcon.css"></style>
 
 <script setup lang="ts">
-  import { defineProps, PropType } from 'vue'
+  import { defineProps as definePropsVue, PropType } from 'vue';
 
   interface iconProps {
     labelText: string | null,
     iconFont: Array<string | null>
   }
-
     
-  const props = defineProps({
+  const props = definePropsVue({
     icon: Object as PropType<iconProps>
   })
 
