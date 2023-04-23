@@ -7,7 +7,7 @@
 <style src="./InputIcon.css"></style>
 
 <script setup lang="ts">
-import { defineProps as definePropsVue, PropType } from 'vue';
+import { defineProps as definePropsVue, PropType } from 'vue'
 
 interface props {
   labelText: string | null,
@@ -18,19 +18,6 @@ interface props {
 const props = defineProps({
   property: Object as PropType<props>
 })
-
-/*
- 
-  O código de cima está fazendo isso por baixo dos panos, por causa do TS.
-
-  const props = defineProps({...})
-
-  const props = defineProps({
-    icon: {
-      type: Object as () => iconProps
-    }
-  })
-*/
 </script>
 
 

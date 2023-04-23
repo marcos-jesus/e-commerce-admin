@@ -5,15 +5,13 @@
                 <h1>Entrar</h1>
             </div>
             <p>Endereço de e-mail</p>
-            <InputIcon :property="iconInput" />
+            <InputIcon :property="iconInputEmail" />
         </div>
         <div class="divInput">
             <p>Endereço de e-mail</p>
-            <InputIcon :property="iconInput2" />
+            <InputIcon :property="iconInputPassword" />
             <Button :property="dataButtonAdmin" />
         </div>
-
-
     </div>
 </template>
 
@@ -29,12 +27,12 @@ const dataButtonAdmin = reactive({
     width: '100%',
     height: '100px'
 })
-const iconInput = reactive({
+const iconInputEmail = reactive({
     iconFont: ['fa', 'phone'],
     labelText: 'Digite seu e-mail',
     iconColor: "white",
 })
-const iconInput2 = reactive({
+const iconInputPassword = reactive({
     iconFont: ['fa', 'envelope'],
     labelText: 'Digite sua senha',
     iconColor: "white",
