@@ -6,13 +6,30 @@
         <div class="divInput">
             <p>Endereço de e-mail</p>
             <InputIcon labelText="Digite seu email" iconFont="phone" />
+
         </div>
     </div>
 </template>
 
 
 <script setup>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import InputIcon from '../../components/Input/InputIcon.vue'
+import { defineProps } from 'vue'
+const defineProp = defineProps({
+
+    props: {
+        labelText: {
+            type: String,
+            default: ''
+        },
+        iconFont: {
+            type: String,
+            default: ''
+        }
+    },
+
+})
 
 
 </script>

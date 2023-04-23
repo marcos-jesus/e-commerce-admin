@@ -5,6 +5,7 @@
         <label class="placeholder" style="color: white">{{ labelText }}</label>
     </div>
 </template>
+<style src="./InputIcon.css"></style>
 
 <script >
 
@@ -22,5 +23,7 @@ export default {
 }
 
 </script>
+
+
 
 
