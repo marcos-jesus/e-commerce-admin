@@ -8,20 +8,30 @@
 <style src="./InputIcon.css"></style>
 
 <script setup lang="ts">
-
-  import { defineProps } from 'vue'
+  import { defineProps, PropType } from 'vue'
 
   interface iconProps {
-    labelText: String,
-    iconFont: Array<string>
+    labelText: string | null,
+    iconFont: Array<string | null>
   }
 
+    
   const props = defineProps({
-    icon: {
-      type: Object as () => iconProps,
-    },
+    icon: Object as PropType<iconProps>
   })
 
+  /*
+  
+    O código de cima está fazendo isso por baixo dos panos, por causa do TS.
+
+    const props = defineProps({...})
+
+    const props = defineProps({
+      icon: {
+        type: Object as () => iconProps
+      }
+    })
+  */
 </script>
 
 
