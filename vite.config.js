@@ -1,13 +1,15 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'node:path'
+import Sass from 'vite-plugin-sass'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), Sass()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
+
     },
   },
 })

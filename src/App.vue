@@ -1,8 +1,8 @@
 <template>
-  <Admin />
+  <Login />
 </template>
 <script setup>
-  import Admin from '@/layout/Admin.vue'
+
+import Login from '@/layout/Login/Login.vue'
 </script>
-<style src="@/styles/globalStyles.css">
-</style>
+<style src="@/styles/globalStyles.css"></style>

@@ -1,0 +1,32 @@
+.divInput {
+
+    width: 30%;
+
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.iconeEmail {
+    position: absolute;
+    margin-left: 20px;
+
+}
+
+.placeholder {
+    position: absolute;
+    justify-self: center;
+    color: #999;
+    margin-left: 70px;
+}
+
+#txtEmail {
+    background-color: #1C1C1F;
+    border: none;
+    height: 30px;
+    width: 100%;
+    padding: 2rem;
+}
