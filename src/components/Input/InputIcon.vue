@@ -1,26 +1,26 @@
 <template>
-    <div class="inputContainer">
-        <font-awesome-icon :icon="iconFont" class="iconeEmail" size="2x" color="red" />
-        <input type="text" id="txtEmail" />
-        <label class="placeholder" style="color: white">{{ labelText }}</label>
-    </div>
+  <div class="inputContainer">
+    <fa :icon="props.icon?.iconFont" class="iconeEmail" size="2x" color="red" />
+    <label class="placeholder"> {{ props.icon?.labelText }}</label>
+    <input type="text" id="txtEmail"/>
+  </div>
 </template>
 <style src="./InputIcon.css"></style>
 
-<script >
+<script setup lang="ts">
 
-export default {
-    props: {
-        labelText: {
-            type: String,
-            default: ''
-        },
-        iconFont: {
-            type: String,
-            default: ''
-        }
+  import { defineProps } from 'vue'
+
+  interface iconProps {
+    labelText: String,
+    iconFont: Array<string>
+  }
+
+  const props = defineProps({
+    icon: {
+      type: Object as () => iconProps,
     },
-}
+  })
 
 </script>
 

@@ -5,33 +5,22 @@
         </div>
         <div class="divInput">
             <p>Endereço de e-mail</p>
-            <InputIcon labelText="Digite seu email" iconFont="phone" />
-
+            <InputIcon :icon="iconInput" />
         </div>
     </div>
 </template>
 
-
 <script setup>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import InputIcon from '../../components/Input/InputIcon.vue'
-import { defineProps } from 'vue'
-const defineProp = defineProps({
+    import InputIcon from '@/components/Input/InputIcon.vue'
 
-    props: {
-        labelText: {
-            type: String,
-            default: ''
-        },
-        iconFont: {
-            type: String,
-            default: ''
-        }
-    },
+    import { reactive } from 'vue'
 
-})
 
+    const iconInput = reactive({
+        iconFont: ['fa', 'phone'],
+        labelText: 'Digite seu e-mail'
+    })
 
 </script>
-<style scoped  src="./Login.scss"></style>
+<style scoped src="./Login.scss"></style>
 
