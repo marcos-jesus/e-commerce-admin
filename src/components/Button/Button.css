@@ -3,4 +3,12 @@
   height: 30px;
   border: none;
   cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: lighter;
+  font-size: 50px;
+}
+
+
+.btn:hover {
+  background-color: yellow;
 }
