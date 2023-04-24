@@ -29,10 +29,10 @@ const hover = ref(false)
 
 const btnStyle = computed(() => {
   return {
-    'background-color': hover.value ? 'yellow' :props.property?.background?.toString(),
+    'background-color': hover.value ? 'yellow' : props.property?.background?.toString(),
     'width': props.property?.width, 
     'height': props.property?.height, 
-    'color': props.property?.color  
+    'color': hover.value ? 'black' : props.property?.color?.toString()
   }
 })
 </script>
