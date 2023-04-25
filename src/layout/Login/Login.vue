@@ -11,15 +11,14 @@
                     </div>
                     <p>Endereço de e-mail</p>
 
-                    <InputIcon :property="iconInputEmail" v-model="objValores.email" />
+                    <InputIcon :property="iconInputEmail" :value="modelInputEmail" />
                 </div>
                 <div class="divInput">
                     <p>Senha</p>
-                    <InputIcon :property="iconInputPassword" v-model="objValores.password" />
+                    <InputIcon :property="iconInputPassword" :value="modelInputPassword" />
                     <div style="margin-top: 40px">
                         <Button @click="entrarLogin" :property="dataButtonAdmin" />
                     </div>
-
                 </div>
             </div>
         </div>
@@ -32,30 +31,23 @@ import Button from '@/components/Button/Button.vue'
 import axios from 'axios'
 import { reactive, ref } from 'vue'
 
-const objValores = reactive(
-    {
-        email: '',
-        password: ''
+/*
+    async function entrarLogin() {
+        try {
+            const resposta = await axios.post("http://localhost:3305/login", {
+                email: objValores.email,
+                password: objValores.password
+            });
+
+            console.log(resposta)
+
+
+        } catch (erro) {
+            console.error("Erro: ", erro);
+        }
     }
-)
 
-
-
-async function entrarLogin() {
-    try {
-        const resposta = await axios.post("http://localhost:3305/login", {
-            email: objValores.email,
-            password: objValores.password
-        });
-
-        console.log(resposta)
-
-
-    } catch (erro) {
-        console.error("Erro: ", erro);
-    }
-}
-
+*/
 const dataButtonAdmin = reactive({
     text: 'Entrar',
     background: '#db1313',
@@ -65,20 +57,19 @@ const dataButtonAdmin = reactive({
     iconFont: ['fa', 'door-open'],
 })
 const iconInputEmail = reactive({
+    type: 'text',
     iconFont: ['fa', 'phone'],
     labelText: 'Digite seu e-mail',
     iconColor: "white",
+    value: '',
 })
 const iconInputPassword = reactive({
+    type: 'password',
     iconFont: ['fa', 'envelope'],
     labelText: 'Digite sua senha',
     iconColor: "white",
+    value: ''
 })
-const dadosLogin = {
-    email: "marcolino@example.com",
-    password: "mypassword"
-};
-
 
 </script>
   

@@ -8,16 +8,13 @@
 .inputContainer {
     display: flex;
     align-items: center;
-
     justify-content: flex-start;
 }
 
 .iconeEmail {
     position: absolute;
     margin-left: 50px;
-
 }
-
 
 #txtEmail {
     background-color: #1C1C1F;
