@@ -3,8 +3,18 @@
   height: 30px;
   border: none;
   cursor: pointer;
-  font-family: 'Inter', sans-serif;
   font-weight: lighter;
   font-size: 50px;
-  font-weight: bold;
+  font-weight: 600;
+
+}
+
+.btnIcon {
+
+
+  position: absolute;
+  color: white;
+  margin-right: 200px;
+
+
 }

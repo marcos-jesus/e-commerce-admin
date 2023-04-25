@@ -31,10 +31,11 @@ import { reactive } from 'vue'
 
 const dataButtonAdmin = reactive({
     text: 'Entrar',
-    background: '#ff0030',
+    background: '#db1313',
     color: '#ffffff',
     width: '100%',
-    height: '80px'
+    height: '80px',
+    iconFont: ['fa', 'door-open'],
 })
 const iconInputEmail = reactive({
     iconFont: ['fa', 'phone'],

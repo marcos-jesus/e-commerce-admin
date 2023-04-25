@@ -1,13 +1,10 @@
 <template>
-  <button 
-    type="button" 
-    class="btn"
-    :style="btnStyle"
-    @mouseover="hover = true"
-    @mouseout="hover = false"
-  >
-    {{ props.property?.text }}
-  </button>
+  <div style="display: flex;align-items: center;justify-content: center;">
+    <fa :icon="props.property?.iconFont" class="btnIcon" size="2x" />
+    <button type="button" class="btn" :style="btnStyle" @mouseover="hover = true" @mouseout="hover = false">
+      {{ props.property?.text }}
+    </button>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -18,7 +15,8 @@ interface propsBtn {
   color: string | null,
   background: string | null,
   width: string | null,
-  height: string | null
+  height: string | null,
+  iconFont: Array<string | null>
 }
 
 const props = defineProps({
@@ -29,10 +27,10 @@ const hover = ref(false)
 
 const btnStyle = computed(() => {
   return {
-    'background-color': hover.value ? 'yellow' : props.property?.background?.toString(),
-    'width': props.property?.width, 
-    'height': props.property?.height, 
-    'color': hover.value ? 'black' : props.property?.color?.toString()
+    'background-color': hover.value ? '#ff0030' : props.property?.background,
+    'width': props.property?.width,
+    'height': props.property?.height,
+    'color': hover.value ? '#white' : props.property?.color
   }
 })
 </script>
