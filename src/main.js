@@ -14,5 +14,6 @@ library.add(fas, far, fab)
 
 const app = createApp(App)
 app.use(ElementPlus)
+
 app.component('fa', FontAwesomeIcon)
 app.mount('#app')
