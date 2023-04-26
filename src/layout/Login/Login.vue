@@ -29,7 +29,7 @@
 import InputIcon from '@/components/Input/InputIcon.vue'
 import Button from '@/components/Button/Button.vue'
 import axios from 'axios'
-import { reactive, ref } from 'vue'
+import { reactive } from 'vue'
 
 /*
     async function entrarLogin() {
