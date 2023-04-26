@@ -28,8 +28,23 @@
 <script setup>
 import InputIcon from '@/components/Input/InputIcon.vue'
 import Button from '@/components/Button/Button.vue'
+<<<<<<< HEAD
+import axios from 'axios'
+import { reactive } from 'vue'
+
+/*
+    async function entrarLogin() {
+        try {
+            const resposta = await axios.post("http://localhost:3305/login", {
+                email: objValores.email,
+                password: objValores.password
+            });
+
+            console.log(resposta)
+=======
 import { reactive, ref } from 'vue'
 import { userService } from '../../services/userServices'
+>>>>>>> 22769e6dc622bc4436a4576d3f7629025d596195
 
 
 const { fetchData, postdata } = userService();
