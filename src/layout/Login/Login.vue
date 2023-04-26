@@ -28,6 +28,7 @@
 <script setup>
 import InputIcon from '@/components/Input/InputIcon.vue'
 import Button from '@/components/Button/Button.vue'
+<<<<<<< HEAD
 import axios from 'axios'
 import { reactive } from 'vue'
 
@@ -40,14 +41,26 @@ import { reactive } from 'vue'
             });
 
             console.log(resposta)
+=======
+import { reactive, ref } from 'vue'
+import { userService } from '../../services/userServices'
+>>>>>>> 22769e6dc622bc4436a4576d3f7629025d596195
 
 
-        } catch (erro) {
-            console.error("Erro: ", erro);
-        }
+const { fetchData, postdata } = userService();
+
+async function entrarLogin() {
+    const data = {
+        email: 'marcolino@example.com',
+        password: 'mypassword'
     }
+    const response = await postdata('login', data)
 
-*/
+    console.log(response.data)
+}
+
+
+
 const dataButtonAdmin = reactive({
     text: 'Entrar',
     background: '#db1313',
